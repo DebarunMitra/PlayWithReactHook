@@ -5,13 +5,14 @@ import SetStateBasedOnPreviousValue from './Components/UseState/SetStateBasedOnP
 import ObjectAsStateVariable from './Components/UseState/ObjectAsStateVariable';
 import StateVariableIsAnArray from './Components/UseState/StateVariableIsAnArray';
 import FirstProgramWithUseEffect from './Components/UseEffect/FirstProgramWithUseEffect';
+import Mouse from './Components/UseEffect/Mouse';
 
 
 
 function App() {
   return (
     <div className="App">
-      <FirstProgramWithUseEffect />        
+      <Mouse />        
     </div>
   );
 }
