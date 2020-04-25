@@ -6,13 +6,13 @@ import ObjectAsStateVariable from './Components/UseState/ObjectAsStateVariable';
 import StateVariableIsAnArray from './Components/UseState/StateVariableIsAnArray';
 import FirstProgramWithUseEffect from './Components/UseEffect/FirstProgramWithUseEffect';
 import Mouse from './Components/UseEffect/Mouse';
-
+import MouseContainer from './Components/UseEffect/MouseContainer';
 
 
 function App() {
   return (
     <div className="App">
-      <Mouse />        
+      <MouseContainer />        
     </div>
   );
 }

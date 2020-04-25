@@ -14,6 +14,11 @@ function Mouse() {
     useEffect(() => {
         console.log('useEffect called');
         window.addEventListener('mousemove', logMouseMovement)
+
+        return ()=>{
+            console.log('Component Unmounted');
+            window.removeEventListener('mousemove', logMouseMovement)
+        }
     },[])//['specify state or props need to watch for the update']
  
     return (
@@ -31,4 +36,7 @@ export default Mouse;
  * It is a close replacement for componentDidMount, componentDidUpdate, componentDidUnmount
  * UseEffect runs after every render.
  * It should place inside the component.
+ * 
+ * 
+ * When require component clean up code, it's require to include a function and return that function from the function passed to useEffect
  */
