@@ -29,3 +29,10 @@ function IntervalCounter() {
 }
 
 export default IntervalCounter;
+
+/**
+ * Note: 
+ * If you are calling a function from useEffect, try to write that function inside the hook.
+ * 
+ * You ca also use multiple useEffect in one component to clear your code.
+ */
