@@ -13,6 +13,10 @@ import DataFetching from './Components/DataFetchWithUseEffect/DataFetching';
 import DataFetchingById from './Components/DataFetchWithUseEffect/DataFetchById';
 import ComponentC from './Components/ContextHook/ComponentC';
 
+import CounterWithReducer from './Components/UseReducer/CounterWithReducer';
+import CounterWithObjectStateAndAction from './Components/UseReducer/CounterWithObjectStateAndAction';
+
+
 
 export const UserContext = React.createContext();
 export const OtherContext = React.createContext();
@@ -21,13 +25,17 @@ export const OtherContext = React.createContext();
 function App() {
   return (
     <div className="App">
-    <UserContext.Provider value={'REACT-CONTEXT'}>
-      <OtherContext.Provider value={'OTHER-CONTEXT'}>
-          <ComponentC />
-      </OtherContext.Provider>
-    </UserContext.Provider>        
+      <CounterWithObjectStateAndAction />
     </div>
   );
 }
 
 export default App;
+
+/**
+ *     <UserContext.Provider value={'REACT-CONTEXT'}>
+      <OtherContext.Provider  value={'OTHER-CONTEXT'}>
+          <ComponentC />
+      </OtherContext.Provider>
+    </UserContext.Provider>
+ */
