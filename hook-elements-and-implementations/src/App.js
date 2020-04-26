@@ -25,6 +25,8 @@ import ComponentC from './Components/HookContextWithReducer/ComponentC';
 
 import DataFetchUsingUseState from './Components/UseState/DataFetchUsingUseState';
 
+import DataFetchUsingUseReducer from './Components/UseReducer/DataFetchUsingUseReducer';
+
 
 
 // export const UserContext = React.createContext();
@@ -59,7 +61,7 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <DataFetchUsingUseState />
+      <DataFetchUsingUseReducer />
     </div>
   );
 }
