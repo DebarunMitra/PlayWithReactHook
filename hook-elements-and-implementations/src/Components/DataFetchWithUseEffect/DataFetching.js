@@ -4,6 +4,7 @@ import axios from 'axios';
 function DataFetching() {
     const [posts, setPosts] = useState([])
 
+
     useEffect(()=>{
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then(res=>{
