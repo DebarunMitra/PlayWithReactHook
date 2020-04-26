@@ -11,12 +11,21 @@ import IntervalCounter from './Components/UseEffect/IntervalCounter';
 
 import DataFetching from './Components/DataFetchWithUseEffect/DataFetching';
 import DataFetchingById from './Components/DataFetchWithUseEffect/DataFetchById';
+import ComponentC from './Components/ContextHook/ComponentC';
+
+
+export const UserContext = React.createContext();
+export const OtherContext = React.createContext();
 
 
 function App() {
   return (
     <div className="App">
-      <DataFetchingById />        
+    <UserContext.Provider value={'REACT-CONTEXT'}>
+      <OtherContext.Provider value={'OTHER-CONTEXT'}>
+          <ComponentC />
+      </OtherContext.Provider>
+    </UserContext.Provider>        
     </div>
   );
 }
