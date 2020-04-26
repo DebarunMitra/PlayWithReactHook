@@ -23,15 +23,19 @@ import ComponentB from './Components/HookContextWithReducer/ComponentB';
 import ComponentC from './Components/HookContextWithReducer/ComponentC';
 
 
+import DataFetchUsingUseState from './Components/UseState/DataFetchUsingUseState';
+
+
 
 // export const UserContext = React.createContext();
 // export const OtherContext = React.createContext();
 
-
+ /** For useContext hook with useReducer hook
 export const CountContext = React.createContext();
 
 
 const initialState = 0;
+
 
 const reducer = (state, action) => {
   switch (action) {
@@ -47,22 +51,15 @@ const reducer = (state, action) => {
   }
 }
 
+ */
+
 
 
 
 function App() {
-  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
-    <CountContext.Provider
-      value ={{countState: count, countDispatch: dispatch}}
-      >
-        Counter : {count}
-        <ComponentA />
-        <ComponentB />
-        <ComponentC />
-    </CountContext.Provider>
-    
+      <DataFetchUsingUseState />
     </div>
   );
 }
@@ -76,3 +73,23 @@ export default App;
       </OtherContext.Provider>
     </UserContext.Provider>
  */
+
+ /** For useContext hook with useReducer hook
+  function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
+  return (
+    <div className="App">
+    <CountContext.Provider
+      value ={{countState: count, countDispatch: dispatch}}
+      >
+        Counter : {count}
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+    </CountContext.Provider>
+
+    </div>
+  );
+}
+
+  */
