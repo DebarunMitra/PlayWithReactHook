@@ -15,6 +15,7 @@ import ComponentC from './Components/ContextHook/ComponentC';
 
 import CounterWithReducer from './Components/UseReducer/CounterWithReducer';
 import CounterWithObjectStateAndAction from './Components/UseReducer/CounterWithObjectStateAndAction';
+import MaintainStateInMultipleReducer from './Components/UseReducer/MaintainStateInMultipleReducer';
 
 
 
@@ -25,7 +26,7 @@ export const OtherContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      <CounterWithObjectStateAndAction />
+      <MaintainStateInMultipleReducer />
     </div>
   );
 }
