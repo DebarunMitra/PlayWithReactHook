@@ -9,11 +9,13 @@ import Mouse from './Components/UseEffect/Mouse';
 import MouseContainer from './Components/UseEffect/MouseContainer';
 import IntervalCounter from './Components/UseEffect/IntervalCounter';
 
+import DataFetching from './Components/DataFetchWithUseEffect/DataFetching';
+
 
 function App() {
   return (
     <div className="App">
-      <IntervalCounter />        
+      <DataFetching />        
     </div>
   );
 }
