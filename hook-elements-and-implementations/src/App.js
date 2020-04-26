@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useReducer} from 'react';
 import './App.css';
 import HookCounterEx1 from './Components/UseState/HookCounterEx1';
 import SetStateBasedOnPreviousValue from './Components/UseState/SetStateBasedOnPreviousValue';
@@ -11,22 +11,58 @@ import IntervalCounter from './Components/UseEffect/IntervalCounter';
 
 import DataFetching from './Components/DataFetchWithUseEffect/DataFetching';
 import DataFetchingById from './Components/DataFetchWithUseEffect/DataFetchById';
-import ComponentC from './Components/ContextHook/ComponentC';
+// import ComponentC from './Components/ContextHook/ComponentC';
 
 import CounterWithReducer from './Components/UseReducer/CounterWithReducer';
 import CounterWithObjectStateAndAction from './Components/UseReducer/CounterWithObjectStateAndAction';
 import MaintainStateInMultipleReducer from './Components/UseReducer/MaintainStateInMultipleReducer';
 
 
+import ComponentA from './Components/HookContextWithReducer/ComponentA';
+import ComponentB from './Components/HookContextWithReducer/ComponentB';
+import ComponentC from './Components/HookContextWithReducer/ComponentC';
 
-export const UserContext = React.createContext();
-export const OtherContext = React.createContext();
+
+
+// export const UserContext = React.createContext();
+// export const OtherContext = React.createContext();
+
+
+export const CountContext = React.createContext();
+
+
+const initialState = 0;
+
+const reducer = (state, action) => {
+  switch (action) {
+    case 'increment':
+      return state + 1
+    case 'decrement':
+      return state - 1
+    case 'reset':
+      return initialState
+    default:
+      return state
+
+  }
+}
+
+
 
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState)
   return (
     <div className="App">
-      <MaintainStateInMultipleReducer />
+    <CountContext.Provider
+      value ={{countState: count, countDispatch: dispatch}}
+      >
+        Counter : {count}
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+    </CountContext.Provider>
+    
     </div>
   );
 }

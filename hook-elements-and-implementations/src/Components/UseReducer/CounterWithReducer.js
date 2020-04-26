@@ -4,7 +4,6 @@ import React, {useReducer} from 'react';
 const initialState = 0;
 
 const reducer = (state, action) =>{
-    // return newState
     switch(action){
         case 'increment':
             return state + 1
