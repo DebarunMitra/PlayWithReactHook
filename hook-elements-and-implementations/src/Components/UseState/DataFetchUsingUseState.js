@@ -15,7 +15,7 @@ function DataFetchUsingUseState() {
            setError('');
        }).catch(err=>{
            console.log(err);
-            setError('Somthing went wrong !!')  
+            setError('Something went wrong !!')  
        })
    }, [])
 
