@@ -28,6 +28,8 @@ import DataFetchUsingUseState from './Components/UseState/DataFetchUsingUseState
 import DataFetchUsingUseReducer from './Components/UseReducer/DataFetchUsingUseReducer';
 
 
+import ParentComponent from './Components/useCallback/ParentComponent';
+
 
 // export const UserContext = React.createContext();
 // export const OtherContext = React.createContext();
@@ -61,7 +63,7 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <DataFetchUsingUseReducer />
+      <ParentComponent />
     </div>
   );
 }
