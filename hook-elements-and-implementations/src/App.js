@@ -36,6 +36,11 @@ import FocusInput from './Components/useRef/FocusInput';
 import Timer from './Components/useRef/Timer';
 
 
+import DocTitleOne from './Components/CustomHook/DocTitleOne';
+import DocTitleTwo from './Components/CustomHook/DocTitleTwo';
+
+
+
 // export const UserContext = React.createContext();
 // export const OtherContext = React.createContext();
 
@@ -68,7 +73,8 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <Timer />
+      <DocTitleOne />
+      <DocTitleTwo />
     </div>
   );
 }
