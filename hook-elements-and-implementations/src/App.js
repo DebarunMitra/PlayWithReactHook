@@ -30,6 +30,9 @@ import DataFetchUsingUseReducer from './Components/UseReducer/DataFetchUsingUseR
 
 import ParentComponent from './Components/useCallback/ParentComponent';
 
+import Counter from './Components/useMemo/Counter';
+
+
 
 // export const UserContext = React.createContext();
 // export const OtherContext = React.createContext();
@@ -63,7 +66,7 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <ParentComponent />
+      <Counter />
     </div>
   );
 }
