@@ -32,6 +32,7 @@ import ParentComponent from './Components/useCallback/ParentComponent';
 
 import Counter from './Components/useMemo/Counter';
 
+import FocusInput from './Components/useRef/FocusInput';
 
 
 // export const UserContext = React.createContext();
@@ -66,7 +67,7 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <FocusInput />
     </div>
   );
 }
