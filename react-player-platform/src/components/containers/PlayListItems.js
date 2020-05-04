@@ -1,18 +1,21 @@
-import React, {Fragment} from 'react';
-import PlayListItem from '../PlayListItem';
-import StyledPlayListItems from '../styles/StyledPlaylistitems';
+import React from "react";
+import PlaylistItem from "../PlayListItem";
+import withLink from "../hoc/withLink";
+import StyledPlaylistitems from "../styles/StyledPlaylistitems";
 
+const PlaylistItemWithLink = withLink(PlaylistItem);
 
-const PlayListItems=({videos, active})=>
-    <StyledPlayListItems>
-        {videos.map(video=>(
-            <PlayListItem
-                key={video.id}
-                video={video}
-                active={video.id===active.id?true:false}
-                played={video.played}
-            />
-        ))}
-    </StyledPlayListItems>
+const PlayListItems = ({ videos, active }) => (
+  <StyledPlaylistitems>
+    {videos.map((video) => (
+      <PlaylistItemWithLink
+        key={video.id}
+        video={video}
+        active={video.id === active.id ? true : false}
+        played={video.played}
+      />
+    ))}
+  </StyledPlaylistitems>
+);
 
 export default PlayListItems;

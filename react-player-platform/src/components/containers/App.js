@@ -10,7 +10,7 @@ function App() {
     <Fragment>
         <Switch>
           <Route exact path="/" component={WbnPlayer} />
-          <Route exact path="/:activeVideoLink" component={WbnPlayer} />
+          <Route exact path="/:activeVideo" component={WbnPlayer} />
         </Switch>
         <GlobalStyle />
     </Fragment>

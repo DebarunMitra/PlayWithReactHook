@@ -37,36 +37,74 @@ const WbnPlayer = ({match, history, location}) => {
         autoplay: false 
     })
 
-    useEffect(()=>{
-        const videoId= match.params.activeVideo;
-        if(videoId!==undefined){
-            const newActiveVideo=state.videos.findIndex(
-                video=>video.id===videoId
-            )
-            setState(prev=>({
-                ...prev,
-                activeVideo: prev.videos[newActiveVideo],
-                autoplay: location.autoplay
-            }))
-        }else{
-            history.push({
-              pathname: `/${state.activeVideo.id}`,
-              autoplay: false
-            }); 
-        }
-    }, [history, location.autoplay, match.params.activeVideo, state.activeVideo.id, state.videos]);
-
+    useEffect(() => {
+      console.log("test");
+      const videoId = match.params.activeVideo;
+      if (videoId !== undefined) {
+        const newActiveVideo = state.videos.findIndex(
+          (video) => video.id === videoId
+        );
+        setState((prev) => ({
+          ...prev,
+          activeVideo: prev.videos[newActiveVideo],
+          autoplay: location.autoplay,
+        }));
+      } else {
+        history.push({
+          pathname: `/${state.activeVideo.id}`,
+          autoplay: false,
+        });
+      }
+    }, [
+      history,
+      location.autoplay,
+      match.params.activeVideo,
+      state.activeVideo.id,
+      state.videos,
+    ]);
     const nightModeCallback=()=>{
-        return true;
-
+       setState((prevState) => ({
+         ...prevState,
+         nightMode: !prevState.nightMode,
+       }));
     }
 
     const endCallback=()=>{
-        return true;
+        const videoId = match.params.activeVideo;
+        const currentVideoIndex = state.videos.findIndex(
+          (video) => video.id === videoId
+        );
+
+        const nextVideo =
+          currentVideoIndex === state.videos.length - 1
+            ? 0
+            : currentVideoIndex + 1;
+
+        history.push({
+          pathname: `${state.videos[nextVideo].id}`,
+          autoplay: false,
+        });
     }
 
-    const progressCallback=()=>{
-        return true;
+    const progressCallback = e =>{
+        if (e.playedSeconds > 10 && e.playedSeconds < 11) {
+          const videos = [...state.videos];
+          const playedVideo = videos.find(
+            (video) => video.id === state.activeVideo.id
+          );
+          playedVideo.played = true;
+
+          setState((prevState) => ({ ...prevState, videos }));
+
+          // setState({
+          //   ...state,
+          //   videos: state.videos.map( element => {
+          //     return element.id === state.activeVideo.id
+          //     ? { ...element, played: true }
+          //     : element;
+          //   })
+          // });
+        }
     }
 
     return (
