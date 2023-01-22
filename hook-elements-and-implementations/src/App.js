@@ -42,6 +42,8 @@ import Timer from './Components/useRef/Timer';
 import DocTitleOne from './Components/CustomHook/DocTitleOne';
 import DocTitleTwo from './Components/CustomHook/DocTitleTwo';
 
+import ClockClass from './Components/LifeCycleMethodVsHooks/ClockClass';
+import ClockHook from './Components/LifeCycleMethodVsHooks/ClockHook';
 
 
 // export const UserContext = React.createContext();
@@ -76,7 +78,11 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <HookCounterEx1 />
+      {/* <HookCounterEx1 /> */}
+      {/* <ClockClass /> */}
+      <ClockHook />
+
+      {/* ustomHook Ex */}
       {/* <DocTitleOne />
       <DocTitleTwo /> */}
     </div>
