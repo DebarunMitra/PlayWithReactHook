@@ -1,8 +1,23 @@
 import React, { useState } from 'react';
 
+function initialStatevalue(){
+    console.log("InitialStatevalue Function Called...");
+    return 0;
+}
+
 function HookCounterEx1() {
 
     const [count, setCount]= useState(0); 
+
+// const [count, setCount]= useState(()=>{
+//     console.log("InitialStatevalue Function Called...");
+//     return 0;
+// });
+// We can also set use state value using functional way
+// But it's better to create a different function instade of creating into the useState, Ex below
+
+// const [count, setCount]= useState(()=>initialStatevalue());
+
 
     return (
         <div className="App">

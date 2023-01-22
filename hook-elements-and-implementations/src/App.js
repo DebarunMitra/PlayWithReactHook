@@ -1,9 +1,12 @@
 import React, {useState, useReducer} from 'react';
 import './App.css';
+// useStateHook
 import HookCounterEx1 from './Components/UseState/HookCounterEx1';
 import SetStateBasedOnPreviousValue from './Components/UseState/SetStateBasedOnPreviousValue';
 import ObjectAsStateVariable from './Components/UseState/ObjectAsStateVariable';
 import StateVariableIsAnArray from './Components/UseState/StateVariableIsAnArray';
+
+// useEfffectHook
 import FirstProgramWithUseEffect from './Components/UseEffect/FirstProgramWithUseEffect';
 import Mouse from './Components/UseEffect/Mouse';
 import MouseContainer from './Components/UseEffect/MouseContainer';
@@ -73,8 +76,9 @@ const reducer = (state, action) => {
 function App() {
   return (
     <div className="App">
-      <DocTitleOne />
-      <DocTitleTwo />
+      <HookCounterEx1 />
+      {/* <DocTitleOne />
+      <DocTitleTwo /> */}
     </div>
   );
 }
