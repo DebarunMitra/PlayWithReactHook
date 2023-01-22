@@ -37,6 +37,7 @@ import Counter from './Components/useMemo/Counter';
 
 import FocusInput from './Components/useRef/FocusInput';
 import Timer from './Components/useRef/Timer';
+import StorePreviousValue from './Components/useRef/StorePreviousValue';
 
 
 import DocTitleOne from './Components/CustomHook/DocTitleOne';
@@ -79,10 +80,20 @@ function App() {
   return (
     <div className="App">
       {/* <HookCounterEx1 /> */}
-      {/* <ClockClass /> */}
-      <ClockHook />
 
-      {/* ustomHook Ex */}
+      {/* LifeCycleMethodVsHooks */}
+      {/* <ClockClass /> */}
+      {/* <ClockHook /> */}
+
+      {/* useMemo */}
+      {/* <Counter /> */}
+
+      {/* useRef */}
+      {/* <FocusInput /> */}
+      {/* <Timer /> */}
+      <StorePreviousValue />
+
+      {/* use Custom Hook Ex */}
       {/* <DocTitleOne />
       <DocTitleTwo /> */}
     </div>
