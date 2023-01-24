@@ -90,8 +90,8 @@ function App() {
 
       {/* useRef */}
       {/* <FocusInput /> */}
-      {/* <Timer /> */}
-      <StorePreviousValue />
+      <Timer />
+      {/* <StorePreviousValue /> */}
 
       {/* use Custom Hook Ex */}
       {/* <DocTitleOne />

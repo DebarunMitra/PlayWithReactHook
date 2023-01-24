@@ -6,6 +6,7 @@ function Timer() {
     const intervalRef = useRef()
 
     useEffect(()=>{
+        console.log("useEffect called...");
         intervalRef.current = setInterval(()=>{
             setTimer(prevTimer=>prevTimer+1)
         }, 1000)
