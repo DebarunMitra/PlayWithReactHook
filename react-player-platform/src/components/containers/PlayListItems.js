@@ -1,6 +1,6 @@
 import React from "react";
 import PlaylistItem from "../PlayListItem";
-import withLink from "../hoc/withLink";
+import withLink from "../hoc/WithLink";
 import StyledPlaylistitems from "../styles/StyledPlaylistitems";
 
 const PlaylistItemWithLink = withLink(PlaylistItem);
