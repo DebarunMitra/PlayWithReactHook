@@ -19,10 +19,16 @@ function ReadAPIwithPagination() {
         });
     }
     getPhotos();
-  }, []);
+  }, [dataCounter]);
+
+ const loadMoreData = ()=>{
+    setDataCounter(()=>dataCounter+5);
+  }
+  
 
   return (
     <div>
+      <button onClick={()=>loadMoreData()}>Load More Cards</button>
       <div className="main-container">
         <div className="card-container">
           {photos.length > 0 ? (
