@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react'
+import './Styles/ReadAPIwithPagination.css';
 
 function ReadAPIwithPagination() {
   const [photos, setPhotos] = useState([]);
@@ -27,7 +28,7 @@ function ReadAPIwithPagination() {
   
 
   return (
-    <div>
+    <div className='App'>
       <button onClick={()=>loadMoreData()}>Load More Cards</button>
       <div className="main-container">
         <div className="card-container">
