@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
+//custom hook
 export default function useBookSearchHook(query, pagenumber) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(true);
@@ -9,7 +10,7 @@ export default function useBookSearchHook(query, pagenumber) {
 
   useEffect(()=>{
     setBooks([]);
-  }, [query])
+  }, [query]);
 
   useEffect(()=>{
     setLoading(true);
