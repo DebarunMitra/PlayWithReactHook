@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import './Styles/ReadAPIwithPagination.css';
 
 function PrintWithInterval() {
     const [input, setInput] = useState("");
@@ -8,6 +9,7 @@ function PrintWithInterval() {
   const onSubmitHandler = (e) => {
     e.preventDefault();
     let collectWords = input.split(" ");
+    console.log(collectWords);
     if (collectWords.length <= 1) {
       //alert("Enter More Words...");
     } else {
@@ -17,34 +19,37 @@ function PrintWithInterval() {
   };
 
   useEffect(() => {
+    //console.log("use Effect called...");
     if (input && words.length > display) {
-      console.log(words);
+      // console.log(words);
       const timer = setTimeout(() => {
         setDisplay(() => display + 1);
         return () => clearInterval(timer);
       }, 1000);
     }
-  }, [input, words, display]);
+  }, [display, words.length]);
 
   return (
-    <div>
+    <div className='App'>
         <div className="input-container">
-        <input
+          <form onChange={(e)=>onSubmitHandler(e)}>
+          <input
           type="text"
           onChange={(e) => {
-            setInput(e.target.value);
-            onSubmitHandler(e);
+            setInput(()=>e.target.value);
           }}
           value={input}
           placeholder="Enter Many Words..."
         />
+          {/* <button type="submit">Submit</button> */}
+        </form>
       </div>
       <div
         className="display-container"
-        style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}
+        style={{ display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: 'center' }}
       >
-        {words.slice(0, display).map((word) => (
-          <p style={{ paddingRight: 4 }}>{word}</p>
+        {words.slice(0, display).map((word, index) => (
+          <p key={`key-${index}`}style={{ paddingRight: 4 }}>{word}</p>
         ))}
       </div>
     </div>
