@@ -3,6 +3,7 @@ import './App.css';
 import ReadAPIwithPagination from './Components/ReadAPIwithPagination';
 import InfiniteScroll from './Components/InfiniteScrollImplementation/InfiniteScroll';
 import PrintWithInterval from './Components/PrintWithInterval';
+import MainCounter from './Components/Counter/MainCounter';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <h2>Welcome To The Interview Prep Session. Let's start some magic!</h2>
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
-      <PrintWithInterval />
+      {/* <PrintWithInterval /> */}
+      <MainCounter />
     </div>
   );
 }
