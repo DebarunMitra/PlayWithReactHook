@@ -4,6 +4,7 @@ import ReadAPIwithPagination from './Components/ReadAPIwithPagination';
 import InfiniteScroll from './Components/InfiniteScrollImplementation/InfiniteScroll';
 import PrintWithInterval from './Components/PrintWithInterval';
 import MainCounter from './Components/Counter/MainCounter';
+import TodoListApp from './Components/TodoListApp';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
-      <MainCounter />
+      {/* <MainCounter /> *}
+      <TodoListApp />
     </div>
   );
 }
