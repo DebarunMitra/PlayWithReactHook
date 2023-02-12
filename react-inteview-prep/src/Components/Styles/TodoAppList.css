@@ -1,0 +1,22 @@
+.todo-app-list-container{
+    display: inline-table;
+    justify-content: center;
+}
+.todo-app-list-container .item-container{
+    border: 3px solid black;
+    width: 20rem;
+    margin-top: 10px;
+}
+
+.todo-app-list-container .item-container p{
+    border: 1px solid black;
+    width: 20rem;
+}
+
+/* .todo-app-list-container .item-container p span:nth-child(0){
+    text-align: justify;
+}
+
+.todo-app-list-container .item-container p span:nth-child(2){
+    text-align: right;
+} */

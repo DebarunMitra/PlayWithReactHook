@@ -14,7 +14,7 @@ function App() {
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
-      {/* <MainCounter /> *}
+      {/* <MainCounter /> */}
       <TodoListApp />
     </div>
   );

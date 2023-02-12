@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Styles/ReadAPIwithPagination.css';
+import './Styles/TodoAppList.css';
 
 function TodoListApp() {
     const [input, setInput] = useState("");
@@ -24,7 +24,7 @@ function TodoListApp() {
   };
 
   return (
-    <div className='App'>
+    <div className='todo-app-list-container'>
         <div className="input-container">
         <input
           type="text"
@@ -40,8 +40,8 @@ function TodoListApp() {
         {todoList.length == 0 ? (
           <p>No Item To Show!</p>
         ) : (
-          todoList.map((data) => (
-            <p>
+          todoList.map((data, index) => (
+            <p key={`item-${index}`}>
               <span>{data.item}</span>&nbsp;&nbsp;&nbsp;
               <button type="button" onClick={() => handleDeleteItem(data.item)}>
                 ❌
