@@ -16,6 +16,7 @@ function ReadAPIwithPagination() {
           for(let i=0;i<dataCounter;i++){
             dataSet.push(dataRes[i]);
           }
+          console.log(dataSet);
           setPhotos(dataSet);
         });
     }
