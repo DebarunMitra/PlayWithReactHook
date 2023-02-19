@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import './Styles/ReadAPIwithPagination.css';
 
 function HorizontalScrollCard() {
 const data = [
@@ -38,8 +39,62 @@ const data = [
         "thumbnailUrl": "https://via.placeholder.com/150/f66b97"
     }
 ];
+
+const [photos, setPhotos] = useState(data);
+const [dataCounter, setDataCounter] = useState(5);
+
+useEffect(() => {
+  function getPhotos() {
+    fetch("https://jsonplaceholder.typicode.com/photos")
+      .then((response) => {
+        return response.json();
+      })
+      .then((dataRes) => {
+        let dataSet = [];
+        for(let i=0;i<dataCounter;i++){
+          dataSet.push(dataRes[i]);
+        }
+        console.log(dataSet);
+        setPhotos(dataSet);
+      });
+  }
+  getPhotos();
+}, [dataCounter]);
+
+const loadMoreData = ()=>{
+  setDataCounter(()=>dataCounter+5);
+}
+
   return (
-    <div>HorizontalScrollCard</div>
+    <div className='App'>
+      <button onClick={()=>loadMoreData()}>Load More Cards</button>
+      <div className="main-container">
+        <div className="card-container">
+          {photos.length > 0 ? (
+            photos.map((photo) => (
+              <div key={`card-${photo.id}`} id={photo.id} className="card">
+                <img
+                  id={"image" + photo.id}
+                  src={photo.url}
+                  alt="card-img"
+                  width="300"
+                  height="200"
+                />
+                <div id={"desc" + photo.id} className="card-description">
+                  <p id={"album" + photo.id}>
+                    <span>albumId: {photo.albumId}</span>
+                    <span>|| photoId: {photo.id}</span>
+                  </p>
+                  <p id={"title" + photo.id}>{photo.title}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>Loading...</p>
+          )}
+        </div>
+      </div>
+    </div>
   )
 }
 

@@ -5,17 +5,19 @@ import InfiniteScroll from './Components/InfiniteScrollImplementation/InfiniteSc
 import PrintWithInterval from './Components/PrintWithInterval';
 import MainCounter from './Components/Counter/MainCounter';
 import TodoListApp from './Components/TodoListApp';
+import HorizontalScrollCard from './Components/HorizontalScrollCard';
 
 function App() {
   return (
     <div className='Main'>
       <h1>Hello Friends...</h1>
       <h2>Welcome To The Interview Prep Session. Let's start some magic!</h2>
-      <ReadAPIwithPagination />
+      {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
       {/* <MainCounter /> */}
       {/* <TodoListApp /> */}
+      <HorizontalScrollCard />
     </div>
   );
 }
