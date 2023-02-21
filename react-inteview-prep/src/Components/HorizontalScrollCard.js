@@ -41,7 +41,7 @@ const data = [
 ];
 
 const [photos, setPhotos] = useState(data);
-const [dataCounter, setDataCounter] = useState(5);
+const [dataCounter, setDataCounter] = useState(10);
 
 useEffect(() => {
   function getPhotos() {
