@@ -6,6 +6,7 @@ import PrintWithInterval from './Components/PrintWithInterval';
 import MainCounter from './Components/Counter/MainCounter';
 import TodoListApp from './Components/TodoListApp';
 import HorizontalScrollCard from './Components/HorizontalScrollCard';
+import Timer from './Components/CountdownTimer/Timer';
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <PrintWithInterval /> */}
       {/* <MainCounter /> */}
       {/* <TodoListApp /> */}
-      <HorizontalScrollCard />
+      {/* <HorizontalScrollCard /> */}
+      <Timer duration={2 * 24 * 60 * 60 * 1000} />
     </div>
   );
 }

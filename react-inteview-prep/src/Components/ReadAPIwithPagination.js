@@ -3,7 +3,7 @@ import './Styles/ReadAPIwithPagination.css';
 
 function ReadAPIwithPagination() {
   const [photos, setPhotos] = useState([]);
-  const [dataCounter, setDataCounter] = useState(5);
+  const [dataCounter, setDataCounter] = useState(3);
 
   useEffect(() => {
     function getPhotos() {
