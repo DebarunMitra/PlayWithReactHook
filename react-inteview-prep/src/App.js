@@ -18,7 +18,7 @@ function App() {
       <h1>Hello Friends...</h1>
       <h2>Welcome To The Interview Prep Session. Let's start some magic!</h2>
       {/* <PortalDemo /> */}
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
         <Person personName={'Joker'} />
       </ErrorBoundary>
       <ErrorBoundary>
@@ -26,8 +26,8 @@ function App() {
       </ErrorBoundary>
       <ErrorBoundary>
         <Person personName={'Clint Clark'} /> 
-      </ErrorBoundary>
-      {/* <MainComponent /> */}
+      </ErrorBoundary> */}
+      <MainComponent />
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}

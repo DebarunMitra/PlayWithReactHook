@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import ComponentA from '../ComponentA';
+import ComponentA from './ComponentA';
 
 export default class MainComponent extends Component {
     constructor(props) {
       super(props)
     
       this.state = {
-         name: "MainComponent"
+         name: "MainComponent",
+         value: false
       };
 
       console.log("MainComponent Constructor");
@@ -37,7 +38,8 @@ export default class MainComponent extends Component {
 
     handleChangeState = () => {
         this.setState({
-            name: "MainComponent Name Updated"
+            name: "MainComponent Name Updated",
+            value: true
         })
     }
     
@@ -47,7 +49,9 @@ export default class MainComponent extends Component {
       <div>
         <p>MainComponent</p>
         <button type='button' onClick={() => this.handleChangeState()}>Change State</button>
-        <ComponentA />
+        {
+          this.state.value?<ComponentA/>:<ComponentA/>
+        }
     </div>
     )
   }
