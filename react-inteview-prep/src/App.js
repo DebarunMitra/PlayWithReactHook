@@ -9,13 +9,24 @@ import HorizontalScrollCard from './Components/HorizontalScrollCard';
 import Timer from './Components/CountdownTimer/Timer';
 import MainComponent from './Components/LifeCycleMethod/ClassLevel/MainComponent';
 import PortalDemo from './Components/ReactPortal/PortalDemo';
+import Person from './Components/ErrorBoundaries/Person';
+import ErrorBoundary from './Components/ErrorBoundaries/ErrorBoundary';
 
 function App() {
   return (
     <div className='Main'>
       <h1>Hello Friends...</h1>
       <h2>Welcome To The Interview Prep Session. Let's start some magic!</h2>
-      <PortalDemo />
+      {/* <PortalDemo /> */}
+      <ErrorBoundary>
+        <Person personName={'Joker'} />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Person personName={'Bruce Wane'} /> 
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Person personName={'Clint Clark'} /> 
+      </ErrorBoundary>
       {/* <MainComponent /> */}
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
