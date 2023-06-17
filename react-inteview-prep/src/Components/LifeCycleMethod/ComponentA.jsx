@@ -19,6 +19,20 @@ export default class ComponentA extends Component {
     componentDidMount(){
         console.log("ComponentA componentDidMount");
     }
+
+    shouldComponentUpdate(){
+        console.log("ComponentA shouldComponentUpdate");
+        return true;
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState){
+        console.log("ComponentA getSnapshotBeforeUpdate");
+        return null;
+    }
+
+    componentDidUpdate(){
+        console.log("ComponentA componentDidUpdate");
+    }
     
   render() {
     console.log("ComponentA render");
