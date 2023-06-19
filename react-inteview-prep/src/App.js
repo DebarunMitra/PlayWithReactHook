@@ -11,6 +11,7 @@ import MainComponent from './Components/LifeCycleMethod/ClassLevel/MainComponent
 import PortalDemo from './Components/ReactPortal/PortalDemo';
 import Person from './Components/ErrorBoundaries/Person';
 import ErrorBoundary from './Components/ErrorBoundaries/ErrorBoundary';
+import BoxColorDecolor from './Components/BoxColorDecolor/BoxColorDecolor';
 
 function App() {
   return (
@@ -27,7 +28,7 @@ function App() {
       <ErrorBoundary>
         <Person personName={'Clint Clark'} /> 
       </ErrorBoundary> */}
-      <MainComponent />
+      {/* <MainComponent /> */}
       {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
@@ -35,6 +36,7 @@ function App() {
       {/* <TodoListApp /> */}
       {/* <HorizontalScrollCard /> */}
       {/* <Timer duration={2 * 24 * 60 * 60 * 1000} /> */}
+      <BoxColorDecolor />
     </div>
   );
 }
