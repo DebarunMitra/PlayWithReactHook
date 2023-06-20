@@ -1,6 +1,8 @@
 import React from 'react'
 
 function Box({id, bg=true, bgColor='green', border=true, borderColor='black', handleClick}) {
+  // console.log("testing", typeof(localStorage.getItem("testing")));
+  // console.log("testing-bool", typeof(JSON.parse(localStorage.getItem("testing-bool"))));
   return (
     <div
         id={id}

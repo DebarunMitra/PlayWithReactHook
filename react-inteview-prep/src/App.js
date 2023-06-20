@@ -14,6 +14,9 @@ import ErrorBoundary from './Components/ErrorBoundaries/ErrorBoundary';
 import BoxColorDecolor from './Components/BoxColorDecolor/BoxColorDecolor';
 
 function App() {
+  // localStorage.setItem("testing-bool", JSON.stringify(true));
+  // localStorage.setItem("testing", 100);
+  
   return (
     <div className='Main'>
       <h1>Hello Friends...</h1>
