@@ -1,8 +1,7 @@
 import React from 'react'
 
-function TicTacToeBox({id, bg=true, bgColor='green', border=true, borderColor='black', handleClick}) {
-  // console.log("testing", typeof(localStorage.getItem("testing")));
-  // console.log("testing-bool", typeof(JSON.parse(localStorage.getItem("testing-bool"))));
+function TicTacToeBox({id, bg=true, bgColor='green', border=true, borderColor='black', handleClick, value='-'}) {
+ 
   return (
     <div
         id={id}
@@ -11,10 +10,14 @@ function TicTacToeBox({id, bg=true, bgColor='green', border=true, borderColor='b
             height: '80px',
             backgroundColor: bg?bgColor:'white',
             border: border?`2px solid ${borderColor}`:'2px solid white',
-            margin: '5px',
+            // margin: '5px',
+            fontSize: '50px',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center'
         }}
         onClick={(e) => bg?handleClick(e):false}
-    ></div>
+    >{value}</div>
   )
 }
 
