@@ -43,7 +43,7 @@ function App() {
       {/* <Timer duration={2 * 24 * 60 * 60 * 1000} /> */}
       {/* <BoxColorDecolor /> */}
       {/* <TicTacToeMain /> */}
-       <CodeSplittingMain />
+       {/* <CodeSplittingMain /> */}
     </div>
   );
 }
