@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {Suspense, lazy} from 'react'
 import { Route, BrowserRouter, Routes, Link, Outlet } from "react-router-dom";
-import Home from "./Home"
+// import Home from "./Home"
 import Store from "./Store"
 import About from "./About"
+
+const Home = lazy(() => wait(1000).then(() => import("./Home")))
 
 function CodeSplittingMain() {
   return (
@@ -26,9 +28,17 @@ function NavWrapper(){
                 <Link to="/store">Store</Link>
                 <Link to="/about">About</Link>
             </nav>
-            <Outlet />
+            <Suspense fallback={<h1>Loading...</h1>}>
+             <Outlet />
+            </Suspense>
         </>
     )
+}
+
+function wait(time){
+    return new Promise(resolve => {
+        setTimeout(resolve, time)
+    })
 }
 
 export default CodeSplittingMain
