@@ -1,14 +1,18 @@
 import React, {Suspense, lazy} from 'react'
 import { Route, BrowserRouter, Routes, Link, Outlet } from "react-router-dom";
 // import Home from "./Home"
-import Store from "./Store"
-import About from "./About"
+// import Store from "./Store"
+// import {About} from "./About"
 
 const Home = lazy(() => wait(1000).then(() => import("./Home")))
+const Store = lazy(() => wait(1000).then(() => import("./Store")))
+const About = lazy(()=> import("./About").then(module=>{
+    return {default: module.About}
+}))
 
 function CodeSplittingMain() {
   return (
-<BrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<NavWrapper />}>
             <Route exact path="/" element={<Home />} />
