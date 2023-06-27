@@ -13,6 +13,7 @@ import Person from './Components/ErrorBoundaries/Person';
 import ErrorBoundary from './Components/ErrorBoundaries/ErrorBoundary';
 import BoxColorDecolor from './Components/BoxColorDecolor/BoxColorDecolor';
 import TicTacToeMain from './Components/TicTacToeGame/TicTacToeMain';
+import CodeSplittingMain from './Components/CodeSplitting/CodeSplittingMain';
 
 function App() {
   // localStorage.setItem("testing-bool", JSON.stringify(true));
@@ -41,7 +42,8 @@ function App() {
       {/* <HorizontalScrollCard /> */}
       {/* <Timer duration={2 * 24 * 60 * 60 * 1000} /> */}
       {/* <BoxColorDecolor /> */}
-      <TicTacToeMain />
+      {/* <TicTacToeMain /> */}
+       <CodeSplittingMain />
     </div>
   );
 }
