@@ -14,6 +14,7 @@ import ErrorBoundary from './Components/ErrorBoundaries/ErrorBoundary';
 import BoxColorDecolor from './Components/BoxColorDecolor/BoxColorDecolor';
 import TicTacToeMain from './Components/TicTacToeGame/TicTacToeMain';
 import CodeSplittingMain from './Components/CodeSplitting/CodeSplittingMain';
+import DebouncingMain from './Components/Debouncing/DebouncingMain';
 
 function App() {
   // localStorage.setItem("testing-bool", JSON.stringify(true));
@@ -43,7 +44,8 @@ function App() {
       {/* <Timer duration={2 * 24 * 60 * 60 * 1000} /> */}
       {/* <BoxColorDecolor /> */}
       {/* <TicTacToeMain /> */}
-       <CodeSplittingMain />
+       {/* <CodeSplittingMain /> */}
+       <DebouncingMain />
     </div>
   );
 }
