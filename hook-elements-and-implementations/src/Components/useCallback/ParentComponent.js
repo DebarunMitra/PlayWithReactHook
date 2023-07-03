@@ -28,3 +28,11 @@ function ParentComponent() {
 }
 
 export default ParentComponent;
+
+//what is useCallback?
+//useCallback is hook that will return a memoized version of the callback function that only changes if one of the dependencies has changed.
+
+//why to useCallback?
+// It is usefull when passing callback to optimized child components that rely on the reference equality to prevent unnecessary rerendes.
+
+
