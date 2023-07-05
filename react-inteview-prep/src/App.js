@@ -15,6 +15,7 @@ import BoxColorDecolor from './Components/BoxColorDecolor/BoxColorDecolor';
 import TicTacToeMain from './Components/TicTacToeGame/TicTacToeMain';
 import CodeSplittingMain from './Components/CodeSplitting/CodeSplittingMain';
 import DebouncingMain from './Components/Debouncing/DebouncingMain';
+import ContextHookMain from './Components/ContextHookManagement/ContextHookMain';
 
 function App() {
   // localStorage.setItem("testing-bool", JSON.stringify(true));
@@ -45,7 +46,8 @@ function App() {
       {/* <BoxColorDecolor /> */}
       {/* <TicTacToeMain /> */}
        {/* <CodeSplittingMain /> */}
-       <DebouncingMain />
+       {/* <DebouncingMain /> */}
+       <ContextHookMain />
     </div>
   );
 }
