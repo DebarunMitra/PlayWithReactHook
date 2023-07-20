@@ -36,7 +36,7 @@ function App() {
         <Person personName={'Clint Clark'} /> 
       </ErrorBoundary> */}
       {/* <MainComponent /> */}
-      {/* <ReadAPIwithPagination /> */}
+      <ReadAPIwithPagination />
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
       {/* <MainCounter /> */}
@@ -47,7 +47,7 @@ function App() {
       {/* <TicTacToeMain /> */}
        {/* <CodeSplittingMain /> */}
        {/* <DebouncingMain /> */}
-       <ContextHookMain />
+       {/* <ContextHookMain /> */}
     </div>
   );
 }

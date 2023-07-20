@@ -6,8 +6,10 @@ function ReadAPIwithPagination() {
   const [dataCounter, setDataCounter] = useState(3);
 
   useEffect(() => {
+    const controller = new AbortController();
+    const signal = controller.signal;
     function getPhotos() {
-      fetch("https://jsonplaceholder.typicode.com/photos")
+      fetch("https://jsonplaceholder.typicode.com/photos", {signal})
         .then((response) => {
           return response.json();
         })
@@ -21,6 +23,11 @@ function ReadAPIwithPagination() {
         });
     }
     getPhotos();
+
+    return () => {
+      // console.log("called");
+      controller.abort();
+    }
   }, [dataCounter]);
 
  const loadMoreData = ()=>{
