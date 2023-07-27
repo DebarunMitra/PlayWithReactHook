@@ -16,6 +16,7 @@ import TicTacToeMain from './Components/TicTacToeGame/TicTacToeMain';
 import CodeSplittingMain from './Components/CodeSplitting/CodeSplittingMain';
 import DebouncingMain from './Components/Debouncing/DebouncingMain';
 import ContextHookMain from './Components/ContextHookManagement/ContextHookMain';
+import CustomForm from './Components/CustomFormValidation/CustomForm';
 
 function App() {
   // localStorage.setItem("testing-bool", JSON.stringify(true));
@@ -36,7 +37,7 @@ function App() {
         <Person personName={'Clint Clark'} /> 
       </ErrorBoundary> */}
       {/* <MainComponent /> */}
-      <ReadAPIwithPagination />
+      {/* <ReadAPIwithPagination /> */}
       {/* <InfiniteScroll /> */}
       {/* <PrintWithInterval /> */}
       {/* <MainCounter /> */}
@@ -48,6 +49,7 @@ function App() {
        {/* <CodeSplittingMain /> */}
        {/* <DebouncingMain /> */}
        {/* <ContextHookMain /> */}
+       <CustomForm />
     </div>
   );
 }
