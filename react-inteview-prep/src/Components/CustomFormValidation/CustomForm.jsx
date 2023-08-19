@@ -52,10 +52,12 @@ function CustomForm() {
 
     const validatePassword = (e) => {
         let passFormatStrong =  /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
+        let mediamFormatPassword = '((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))';
         let passValue = e.target.value;
 
         if(!passFormatStrong.test(passValue)){
             document.getElementById(e.target.id).style.border = "1px solid red";
+            document.getElementById("passStatus").innerText = "Strong"; 
         }else{
             document.getElementById(e.target.id).style.border = "1px inset black";
         }
@@ -63,6 +65,11 @@ function CustomForm() {
     }
 
     const handleOnChange  = (e) => {
+
+        if(e.target.id === "name"){
+            let nameValue = e.target.value;
+            setName(nameValue);
+        }
 
         if(e.target.id === "email"){
             let emailValue = e.target.value;
@@ -90,7 +97,7 @@ function CustomForm() {
         <form id="mainForm" onSubmit={()=>handleSubmit()}>
             <div className='formContent'>
                 <label>Name:&nbsp;
-                    <input type="text" id="name" name="name" />
+                    <input type="text" id="name" name="name" onChange={(e)=>handleOnChange(e)} value={name} />
                 </label>
             </div><br/>
             <div className='formContent'>
@@ -104,8 +111,9 @@ function CustomForm() {
                 </label>
             </div><br/>
             <div className='formContent'>
-                <label >Password:&nbsp;
-                    <input type="password" id="password" name="password" onBlur={(e)=>validatePassword(e)} />
+                <label>Password:&nbsp;
+                    <input type="password" id="password" name="password" onBlur={(e)=>validatePassword(e)} value={password} />
+                    <span id="passStatus">&nbsp;status</span>
                 </label>
             </div><br/>
             <div className='formContent'>
